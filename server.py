@@ -7,7 +7,7 @@ Run:  python server.py   (or  py server.py  on Windows)
 Open: http://localhost:5100
 """
 
-import json, re, time, threading
+import json, re, time, threading, os
 from pathlib import Path
 from datetime import datetime
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -15,7 +15,7 @@ from urllib.request import urlopen, Request as UReq
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 
-PORT      = 5100
+PORT = int(os.environ.get("PORT", 5100))
 CACHE_DIR = Path(__file__).parent / 'cache'
 CACHE_DIR.mkdir(exist_ok=True)
 CACHE_TTL = 900   # 15 minutes
