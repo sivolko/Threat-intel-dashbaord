@@ -8,7 +8,7 @@ let sortDir          = -1;          // -1 = descending
 let refreshTimer     = null;
 let refreshCountdown = 900;
 const REFRESH_INTERVAL = 900;       // seconds
-const API_BASE         = 'http://localhost:5100';
+const API_BASE         = '';
 
 // ═══════════════════ SECTOR / SOURCE COLOUR MAPS ═══════════════════
 const SECTOR_COLORS = {
